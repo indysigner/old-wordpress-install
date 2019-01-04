@@ -10,7 +10,7 @@ I'll try and gather as much code snippets and use-cases as I can and put it all 
 
 ### Typography
 
-####Paragraphs, strong, em, del, a - apart from the first paragaph above
+#### Paragraphs, strong, em, del, a - apart from the first paragaph above
 
 Here we go with the standard paragraph for the Smashing Magazine blog coming in "Proxima Nova Regular" (for brevity from now on only "Proxima") and 1.125em (18px) font-size. If you want a part of it to be of even more importance, you can use the `<strong>` tag (displayed in `<strong>Proxima Bold</strong>`) or use the `<em>` tag (displayed in `<em>Proxima Italic</em>`).
 Links make the web what it is, so in order to create `<a href="#">Links</a>` you should, of course, use the anchor tag: `<a href="#">Linked Text</a>`.
@@ -21,7 +21,7 @@ In order to write superscript or subscript, you may use `<sup>` or `<sub>` respe
 
 Marking text for reference purpose is possible by adding `<mark>` `<mark>around the characters</mark>` of your paragraph you want to highlight. An explanation on `<em>when</em>` to use the element can be found at the [Mozilla Dev-Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark).
 
-####Preformatted Text - Code Examples
+#### Preformatted Text - Code Examples
 
 In order to provide preformatted code examples with your article, you will want to use the `<pre>` tag in combination with the `<code>` tag. By adding a class of `language-*` to the code tag, you can give our syntax-highlighter <a href="https://prismjs.com">Prism</a> (by <a href="https://twitter.com/leaverou">Lea Verou</a>) hints at what he is going to highlight for our readers.
 
@@ -37,7 +37,7 @@ Some HTML goes here.
 </code></pre>
 ```
 
-####Blockquotes
+#### Blockquotes
 
 Blockquotes are pretty straight-forward. Use `<blockquote>` and add some text. It will be displayed in Skolar Italic at a slightly bigger font-size than normal text and has a light-gray background, thus it really stands out. So, <em>this:</em>
 
@@ -120,7 +120,7 @@ Will result in *that:*
 ```
 
 
-#####An Image With A Caption
+##### An Image With A Caption
 
 ```html
 <figure><img src="https://placehold.it/500x350" alt="Placeholder Image" /><figcaption>This is a cpation to the image above.</figcaption></figure>
@@ -128,15 +128,15 @@ Will result in *that:*
 
 Please make sure the `<figcaption>` element follows the `<img>` element without any whitespace. Otherwise Wordpress will put `<p>` tags around the figcaption and thusly add to the vertical spacing, which is unwanted.
 
-#####An Image With A Link And A Caption With Another Link
+##### An Image With A Link And A Caption With Another Link
 
 ```html
 <figure><img src="https://placehold.it/500x350" alt="Placeholder Image" /><figcaption>This is a cpation to the <a href="#">image</a> above.</figcaption></figure>
 ```
 
-####Video Contents
+#### Video Contents
 
-#####Keeping the aspect-ratio
+##### Keeping the aspect-ratio
 
 In order to maintain the aspect-ratio of videos, we <em>always</em> have to place a container around the `<iframe>`, `<object>` or `<embed>` referencing the source. Please make sure to remove (if given) the height and width attributes on the iframe in order to make the video scale without any hassle. <strong>Note:</strong> If the width of video exceeds 850 pixels, then it won't be a problem and the width-attribute can stay where it is, as the article's container won't scale above that value –  also, if someone wants a bigger view, there's always <em>fullscreen</em>.
 
@@ -156,7 +156,7 @@ will result in this:
 </figure>
 ```
 
-#####A Video With A Caption
+##### A Video With A Caption
 
 In order to display a caption to a video, you need to follow the same pattern as when adding a caption to an image. Yet, as the iframe element will be absolutely positioned you need to add a `<div>` to wrap the container and thereby make the `<figcaption>` element behave –  and not jump up and hide behind the video.
 
@@ -170,7 +170,7 @@ I'm currently fixing a bug preventing the video from spanning the whole width of
 <figure>
 ```
 
-####Codepen Embed
+#### Codepen Embed
 
 As you may have realized alreay, there was no mention on SVG. There is a shortcode to embed Codepens and it has a few options to choose from. `&#91;codepen_embed %settings% caption="{text}"] {text} &#91;/codepen_embed]` this is what the shortcode will look like.
 
