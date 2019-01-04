@@ -1,0 +1,107 @@
+/**
+ * 100em wide displays above the fold
+ * 1600px viewport width
+ *
+ */
+@media screen and (min-width: 100em) {
+
+  /**
+   * Raising the font-size and thereby sizing up all our em-related
+   * values for width, paddings, margins and font-sizes
+   */
+  body {
+    font-size: 1.15em;
+  }
+
+  // More whitespace around articles/posts
+  .post {
+    padding-left: @space*2;
+    padding-right: @space*2;
+  }
+
+  // More whitespace around our Adblock Content
+  .blocked {
+    margin: @1 @space*2;
+  }
+
+  /**
+   * Aligning the section navigation with the content
+   * in the main area
+   */
+  .sn {
+    margin-top: 3.65%;
+  }
+
+  // Moving the child ul back 1px in order to cover up a border
+  .sn ul li ul {
+    margin-left: -@08;
+  }
+
+  // More whitespace around social-media-icons
+  .ch {
+    margin: @1*1.5 0 0 @1*1.5;
+  }
+
+  // Lower the fontsize beneath ads (it is fixed)
+  .ad,
+  .ch {
+    font-size: .86957em; // 16 / 18.4
+  }
+
+  /**
+   * Adjusting the position of Sidebar Widgets to make them dock to
+   * the main content area
+   */
+  .wg {
+    margin-left: -1.08696em; // 20 / 18.4
+  }
+
+  // Adjustment to position the main Content Container
+  .cc {
+    margin-right: -24.45652em; // 450 / 18.4
+  }
+  .fluid {
+    margin-right: 24.45652em; // 450 / 18.4
+  }
+
+  // The sidebar needs to be exactly 420px, always!
+  .side {
+    width: 22.82609em; // 420 / 18.4
+    padding-left: 1.08696em; // 20 / 18.4
+  }
+
+  // Ads spanning the whole width of the sidebar
+  .bnnr-list .double {
+    width: 29.71015em; // 410 / 13.8 as 12 (.75em) * 1.15 = 13.8
+  }
+
+  // More whitespace around body-copy
+  article p {
+    padding: .75em 0; // 20 / 20
+  }
+
+  article li {
+    padding: @1/2 0; // 10 / 20
+  }
+
+  // Our images are all 500px wide at max
+  article img {
+    max-width: 27.17391em; // 500 / 18.4
+  }
+
+  // Full width images can span the whole width of the content container
+  .fwi img {
+    max-width: 100%;
+  }
+
+  // Adjusting the position of the Category Intro to align with the content
+  .cat {
+    margin-left: @space;
+  }
+
+  // Positioning the illustration next to category excerpts on archive-pages
+  .pt {
+    top: -@1/2;
+    right: -@1*5;
+  }
+}

@@ -1,0 +1,49 @@
+/**
+ * Article styles for the main css file
+ */
+
+// Full Width Images with centered text
+.fwi {
+  text-align: center;
+
+  margin: @1 auto;
+  max-width: 100%;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// "Read more" buttons beneath excerpts
+.cr {
+  margin: @1*2 0 0;
+  padding: .35em .65em;
+
+  .bo08;
+
+  background: @cyan;
+
+  border-radius: .3125em;
+
+  &:hover,
+  &:focus {
+    border-color: @cyan - #444; // #007394
+  }
+
+  &:active {
+    background: @cyan;
+    border-color: @cyan - #777; // #004061
+  }
+}
+
+// Mailchimp Form Styling
+.mcf {
+  font-size: @1;
+  clear: left;
+}
+
+// Captions and craptions (br + em = craption)
+br+em,
+figcaption {
+  font-size: @1;
+}

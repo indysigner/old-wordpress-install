@@ -1,0 +1,48 @@
+/**
+ * Advertisement above the fold
+ *
+ */
+
+// "Advertisement" needs to be on top of ad-spaces for Adblock whitelisting
+.declare {
+  float: left;
+  margin: .875em 0 @1/2; // creating space to the ad-banner
+
+  color: rgba(0,0,0,.25);
+}
+
+// Advertise with us link! Please! We need it! Oh please do!
+.awithus {
+  margin-top: .875em;
+
+  z-index: 9;
+}
+
+// Declaration on top of the ad next to the intro paragraph inside articles
+.ad .declare {
+  font-size: @1;
+
+  float: none;
+
+  padding: @1 0 @1/2;
+  margin-top: 0;
+}
+
+// Container for the ad next to the intro paragraph
+.cad {
+  margin-bottom: @1*1.5;
+}
+
+// Adblock Content Container – displayed when adblock is detected
+.blocked {
+  margin: @1 @space;
+  padding: @1 @1*1.5;
+
+  background: #f9f9f9;
+  border-radius: @1/2;
+
+  figure {
+    float: right;
+    margin: 0 0 0 @1;
+  }
+}

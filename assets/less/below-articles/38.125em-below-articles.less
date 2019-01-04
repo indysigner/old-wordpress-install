@@ -1,0 +1,83 @@
+// 38.125em-below-articles.less
+
+@media screen and (min-width: 38.125em) {
+
+  // degreed button
+  .degreed {
+    display: inline-block;
+
+    margin-top: -1.75em;
+  }
+
+  // related article container
+  .ra {
+    clear: none;
+    float: left;
+
+    width: 30%;
+    margin-right: 5%;
+
+    // last container needs no margin
+    &:nth-child(4) {
+      margin-right: 0;
+    }
+
+    h3 {
+      float: none;
+
+      width: @100;
+      padding: 0;
+    }
+
+    .pp {
+      display: block;
+      float: none;
+
+      width: @100;
+      margin: 0 0 @1/2;
+    }
+
+    img {
+      max-width: @100;
+    }
+  }
+
+  // author bio text
+  .about {
+    width: 80%;
+  }
+
+  // author bio gravatar
+  .grv {
+    width: 20%;
+  }
+
+  // Post Pagination
+  .arrows {
+    float: right;
+    z-index: 9;
+
+    .prv,
+    .nxt,
+    .pgs {
+      width: auto;
+    }
+
+    .pgs {
+      margin: 0 @1;
+    }
+  }
+
+  // post pagination "previous" button
+  .arrows .prv,
+  // post pagination "next" button
+  .arrows .nxt,
+  // post pagination list of pages
+  .arrows .pgs {
+    float: none;
+  }
+
+  .pap {
+    z-index: 8;
+  }
+}

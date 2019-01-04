@@ -1,0 +1,206 @@
+/**
+ * Comments Section styling
+ */
+
+// Ad below related articles and above the comments-section
+.adv {
+  margin: 0 @space;
+}
+
+// ad on top of comment area
+.commentspnsrtarget {
+  clear: both;
+}
+
+// Displaying the current amount of comments
+.sub-tabs {
+  clear: both;
+
+  max-width: 15.625em;
+
+  margin: @1*4 @space;
+
+  .bo08; // see variables-maincss.less
+  border-top: 0;
+
+  a {
+    position: relative;
+    display: block;
+
+    text-align: center;
+
+    padding: @1 0;
+
+    background-color: @white;
+    color: @dark-gray;
+
+    transition: all .3;
+
+    &:hover,
+    &:focus {
+      color: @dark-gray;
+      background-color: @yellow;
+    }
+  }
+
+  // This is added dynamically
+  .active::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    right: 46%;
+
+    width: 0;
+
+    border: .625em solid transparent;
+    border-bottom-color: @light-gray;
+  }
+}
+
+// same as #discussion - comments parent container
+.discussion {
+  padding: 0 @space @1;
+}
+
+// ul holding the list of comments (cl = commentlist) same as #comments-overview
+.cl {
+  list-style: none;
+
+  padding: 0;
+
+  // each li is a comment
+  li {
+    margin-bottom: @1*4;
+  }
+}
+
+// Second Level ul keeping child-comments
+.children {
+  clear: both;
+
+  margin: @1*2 0 0 @space;
+  padding-top: @1;
+
+  li {
+    margin-bottom: 0;
+  }
+
+  // Child li's, which are not the first-child need wee bit more spacing beneath
+  > li:not(:first-child) {
+    margin-bottom: @1*3;
+  }
+}
+
+// commentnumber styling
+.cn {
+  font-size: 3.5em; // 56 / 16
+
+  position: absolute;
+  right: 0; // aligned with the right edge of the comment container
+
+  color: @light-gray;
+
+  z-index: 1;
+}
+
+/**
+ * Comment made by the author of the article being commented on
+ * Here we add generated content after the name of the author
+ */
+.bypostauthor > .c .cau h3::after {
+  content: "post author";
+
+  font-size: .58333333333333em;
+
+  color: #f3a48f; // pale pink
+
+  padding-left: @1/4;
+}
+// commenttext has different background- and border-color (pink... I don't know)
+.bypostauthor > .c .ctx {
+  border-color: rgba(233,92,51,.5); // not so pale pink
+  background: rgba(233,92,51,.1); // pale pink
+}
+// commentnumber is also pink-ish
+.bypostauthor > .cn {
+  color: rgba(233,92,51,.5);
+}
+
+// Standard Comment Author Container
+.cau {
+  margin-right: @1;
+  padding-bottom: @1/2;
+
+  // gravatar of comment author
+  img {
+    float: left;
+
+    margin-right: @1;
+  }
+
+  // Comment Author Name
+  h3 {
+    padding: 0;
+    line-height: 1.5;
+
+    a {
+      padding-bottom: 0;
+    }
+  }
+}
+
+// date (timestamp) for a comment
+.dati {
+  clear: both;
+  float: left;
+
+  margin-top: .3125em;
+}
+
+// actual comment text
+.ctx {
+  font-size: @1*1.125em;
+  word-wrap: break-word;
+
+  box-sizing: border-box; // fixing the one px overlapping of the border
+
+  clear: both;
+
+  padding: 0 10% 0 2.5%;
+
+  .bo08; // see variables-maincss.less
+
+  * {
+    position: relative;
+    z-index: 15;
+  }
+
+  /* to even out the spacing between paragraphs in
+  comments and the container */
+  p:first-child {
+    padding-top: @1;
+  }
+
+  p:last-child {
+    padding-bottom: @1;
+  }
+}
+
+// commentmeta (voting and reply)
+.com {
+  clear: both;
+
+  padding: @1/2 0 0 5%;
+}
+
+// Reply to a comment link
+.reply {
+  top: @1/4;
+
+  float: right;
+
+  margin-left: @1*1.25;
+
+  z-index: 4;
+}

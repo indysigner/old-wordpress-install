@@ -1,0 +1,77 @@
+/**
+ * 76.25em wide displays
+ * 1220px
+ */
+
+@media screen and (min-width:76.25em) {
+
+  // Sections navigation first level links
+  .sct li:hover a,
+  .sct li:focus a {
+    .bobo08; // see variables-maincss.less
+
+    padding-bottom: @1/4;
+  }
+  .sn li a:focus {
+    padding-bottom: @1/4;
+  }
+
+  // Sections Navigation Second Level Link Elements
+  .sct li:hover ul li a,
+  .sct li:focus ul li a {
+    color: @dark-gray;
+
+    border: 0;
+  }
+  .sct li ul li a:hover,
+  .sct li ul li a:focus {
+    color: @dark-gray;
+  }
+
+  .menu-item-coding:hover,
+  .menu-item-coding.current-menu-item {
+    border-left-color: @coding;
+  }
+  .menu-item-design:hover,
+  .menu-item-design.current-menu-item {
+    border-left-color: @design;
+  }
+  .menu-item-mobile:hover,
+  .menu-item-mobile.current-menu-item {
+    border-left-color: @mobile;
+  }
+  .menu-item-graphics:hover,
+  .menu-item-graphics.current-menu-item {
+    border-left-color: @graphics;
+  }
+  .menu-item-uxdesign:hover,
+  .menu-item-uxdesign.current-menu-item {
+    border-left-color: @ux;
+  }
+  .menu-item-wordpress:hover,
+  .menu-item-wordpress.current-menu-item {
+    border-left-color: @wp;
+  }
+
+  // Homepage Content Ad (after second article excerpt)
+  .hpa {
+    padding-left: @space*2;
+  }
+
+  // Footer Product
+  .fp {
+    width: 28%;
+    margin-right: 1%;
+  }
+  // Footer Product Image
+  .pi {
+    float: left;
+
+    width: 27%;
+    margin: 0 .75em @1/8 0;
+  }
+  // Footer Product Description
+  .pd {
+    clear: none;
+  }
+}

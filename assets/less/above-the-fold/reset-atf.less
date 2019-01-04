@@ -1,0 +1,195 @@
+/**
+ * Reset Styles for above the fold css
+ *
+ */
+
+html,
+body,
+div,
+aside,
+span,
+h1, h2, h3, h4,
+p,
+img,
+strong,
+b,
+ul,
+li,
+form,
+label,
+figure,
+figcaption,
+article,
+nav {
+  font-size: @100;
+  vertical-align: baseline;
+
+  margin: 0;
+  padding: 0;
+  outline: 0;
+
+  border: 0;
+  background: transparent;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "liga", "kern";
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+  line-height: 1.46;
+
+  // anything above that value stretches the magazine too far apart - also line-length
+  max-width: 2000px;
+
+  color: @dark-gray;
+  background-image: url(https://media-mediatemple.netdna-ssl.com/wp-content/themes/smashing-magazine/assets/images/smbg.png);
+}
+
+a {
+  font-size: @100;
+  text-decoration: none;
+
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  color: @cyan;
+
+  &:active {
+    color: @white;
+    background-color: @smashing-red;
+  }
+}
+
+li a,
+p a,
+.pap a {
+  .bobo08; // see variables.less
+
+  padding-bottom: @08;
+}
+
+// Captions have a smaller font-size so the 1px value needs to be raised
+br+em a,
+figcaption a {
+  border-bottom: .09em solid @lovin-it;
+  padding-bottom: .09em;
+}
+
+.pmd a,
+nav a {
+  padding-bottom: 0;
+  border: 0;
+}
+
+// Making images responsive
+img {
+  max-width: @100;
+  height: auto;
+
+  border: 0;
+}
+
+// We are using some SVG graphics
+svg:not(:root) {
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style: decimal;
+}
+
+article ul {
+  list-style: disc;
+}
+
+article ul,
+article ol {
+  font-size: 1.125em; // 18 / 16
+  margin: @1/2 @1*1.5;
+}
+
+article li {
+  padding: @1/4 0;
+}
+
+article li ul,
+article li ol {
+  font-size: @1;
+  margin: 0 @1*1.5;
+}
+
+input {
+  vertical-align: middle;
+}
+
+label,
+[type=submit],
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  margin: 0;
+}
+
+button,
+[type="text"] {
+  font-size: 1.125em;
+
+  outline: 0;
+
+  transition: border-color .3s;
+}
+
+// submit button for all searches
+button {
+  vertical-align: top;
+  overflow: visible;
+
+  padding: .75em @1*2;
+  border: @08 solid @border-red;
+
+  color: @white;
+  background-color: @smashing-red-2;
+  background: linear-gradient(to bottom, #e85c33 0%, #e53a2b @100);
+
+  border-radius: @1/2;
+}
+
+[type="text"]:placeholder {
+  color: @middle-gray;
+}
+
+[type="text"] {
+  line-height: 1.5;
+
+  margin-bottom: @1;
+  padding: @1/2;
+
+  color: @middle-gray;
+
+  .bo08; // see variables.less
+
+  background-color: @white;
+
+  border-radius: @1/2 0 0 @1/2;
+}
+
+// Windows and IE having "issues" – not like we didn't know
+@-ms-viewport {
+  width: device-width;
+}

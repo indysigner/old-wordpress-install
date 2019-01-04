@@ -1,0 +1,82 @@
+// comments-plugin.less
+
+/**
+ * Comment Rating Plugin Styling
+ */
+
+// Commentrating container (has proxima nova bold as font in font-setting.less)
+.rating__container {
+  .font-proxima-nova-bold;
+
+  position: absolute;
+  right: 3.5em;
+}
+
+// displaying a number of how good or bad your comment is
+.rating__value {
+  margin-left: .375em;
+  top: @1/4;
+  float: right;
+
+  // positive rating
+  &--positive {
+    color: #41B411;
+  }
+
+  // negative rating
+  &--negative {
+    color: red;
+  }
+}
+
+// Container for the up- and downvoting buttons
+.rating__stars {
+  float: left;
+  margin: .3em .6em 0 0;
+}
+
+// Single Rating Button
+.rating__button {
+  display: inline-block;
+
+  width: 1.25em;
+  height: 1.25em;
+
+  background: transparent url(../images/rating-sprite.svg) no-repeat top left;
+  background-size: 3.125em 3.125em;
+  opacity: .3;
+
+  transition: all .3;
+
+  &:link,
+  &:hover,
+  &:focus,
+  &:active {
+    border: 0;
+  }
+
+  // Voting Down
+  &--down {
+    background-position: -.125em -.9em;
+
+    &:hover,
+    &:focus {
+      opacity: .6;
+    }
+  }
+
+  // Voting Up
+  &--up {
+    background-position: -1.875em -@1;
+    margin-right: .6em;
+
+    &:hover,
+    &:focus {
+      opacity: .6;
+    }
+  }
+}
+
+.rating__alert {
+  padding: 0;
+}

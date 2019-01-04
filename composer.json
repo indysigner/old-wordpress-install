@@ -1,0 +1,24 @@
+{
+  "name": "inpsyde/smashing-magazine",
+  "license": "proprietary",
+  "type": "wordpress-theme",
+  "description": "Smashing Magazine WordPress Theme",
+  "keywords": [
+    "wordpress",
+    "wordpress-theme"
+  ],
+  "authors": [
+    {
+      "name": "ChriCo",
+      "email": "c.brueckner@inpsyde.com",
+      "homepage": "http://www.chrico.info"
+    },
+    {
+      "name": "nice2meatu",
+      "email": "marco.hengstenberg@smashingmagazine.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6"
+  }
+}

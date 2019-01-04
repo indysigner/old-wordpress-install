@@ -1,0 +1,30 @@
+/**
+ * 31.25em wide displays above the fold
+ * 500px viewport width
+ *
+ */
+@media screen and (min-width: 31.25em) {
+
+  // Keeping the logo relatively small
+  .h {
+    width: 28.55%;
+  }
+
+  // list-elements in metadata can now stand next to each other
+  .pmd li {
+    display: inline-block;
+    padding-right: @1*2;
+  }
+
+  // List-Element for Author in metadata stays on top
+  .pmd .a {
+    display: block;
+  }
+
+  // List-elements for Tags in metadata stand right next to each other
+  .tags a {
+    display: inline;
+
+    margin: 0;
+  }
+}

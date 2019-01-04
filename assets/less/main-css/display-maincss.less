@@ -1,0 +1,45 @@
+/**
+ * Displaying stuff in the main css file – or not
+ */
+
+// display: none block
+// we load the ads in this box beneath the footer before pumping them into the sidebar
+#bannersource,
+// adstuff we don't need to be visible
+#ads__banner,
+#ads__Beacons {
+  display: none;
+}
+
+// display: inline-block block
+// read more button
+.cr,
+// pagination "previous" button
+.prv a,
+// pagination "next" button
+.nxt a {
+  display: inline-block;
+}
+
+// display: block block
+// mobile nav ul when mobile nav is targeted
+.mn:target ul,
+// mobile search form element when mobile search is targeted
+.ms:target form,
+// mobile nav closingbutton when mobile nav is targeted
+.mn:target + .mnc,
+// mobile search closingbutton when mobile search is targeted
+.ms:target + .msc,
+// links inside the mobile nav
+.mnu li a,
+// HTML5 elements => IE8 and such
+aside,
+details,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+hr {
+  display: block;
+}

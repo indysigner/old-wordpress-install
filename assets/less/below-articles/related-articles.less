@@ -1,0 +1,40 @@
+// related-articles.less
+
+// Related articles parent container
+.ras {
+  margin: @1*2 0;
+  padding: 0 @space;
+  border-bottom: .3125em solid @light-gray;
+}
+
+// Single related article container
+.ra {
+  clear: both;
+
+  margin: @1*2 auto;
+
+  // Image may take up only half the width of a related article
+  img {
+    max-width: 44.5%;
+  }
+
+  // Headline sits on the left
+  h3 {
+    .font-proxima-nova-bold;
+    font-size: @1;
+
+    float: right;
+
+    width: 44.5%;
+    padding: 0 0 0 @space;
+  }
+
+  a {
+    transition: all .3s;
+  }
+
+  &:hover a,
+  &:focus a {
+    color: @smashing-red;
+  }
+}

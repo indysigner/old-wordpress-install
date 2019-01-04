@@ -1,0 +1,53 @@
+// comment-form.less
+
+// contact form element
+.infofield {
+  .font-proxima-nova;
+}
+
+// The container for our comment form
+.comment-respond {
+  margin: 0 @space @1*2;
+
+  div,
+  form {
+    position: static;
+
+    margin-top: @1;
+  }
+
+  // Hint that all fields are mandatory
+  p strong {
+    color: @smashing-red;
+    display: inline-block;
+  }
+
+  // Labels for the different input fields
+  label {
+    padding-bottom: @1/2;
+  }
+}
+
+// The form element for the comment form
+.comment-form {
+  margin-bottom: @1*4;
+
+  label {
+    .font-skolar-bold;
+  }
+
+  // Inputs should span the whole content area width
+  [type="text"] {
+    box-sizing: border-box;
+    width: @100;
+
+    border-radius: @1/2;
+  }
+}
+
+// Click to cancel reply link (only visible after clicking "Reply" beneath a comment)
+.ccr {
+  position: absolute;
+  right: 0;
+  top: @1*2.5;
+}

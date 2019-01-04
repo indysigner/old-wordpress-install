@@ -1,0 +1,296 @@
+/**
+ * comments.less
+ *
+ * Any CSS regarding the comments section
+ **/
+/**
+ * Variables for Smashing Magazine
+ */
+/**
+ * Colors
+ *
+ */
+/* This dark gray color is the main text color */
+.bobo08 {
+  border-bottom: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+.boto08 {
+  border-top: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+.bo08 {
+  border: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+/**
+ * Mixins for Font Setting for the main css file
+ *
+ */
+/**
+ * Comments Section styling
+ */
+.adv {
+  margin: 0 5.5%;
+}
+.commentspnsrtarget {
+  clear: both;
+}
+.sub-tabs {
+  clear: both;
+  max-width: 15.625em;
+  margin: 4em 5.5%;
+  border: 0.08em solid rgba(0, 0, 0, 0.1);
+  border-top: 0;
+}
+.sub-tabs a {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+  background-color: #fff;
+  color: #333;
+  -webkit-transition: all .3;
+          transition: all .3;
+}
+.sub-tabs a:hover,
+.sub-tabs a:focus {
+  color: #333;
+  background-color: #ff6;
+}
+.sub-tabs .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 46%;
+  width: 0;
+  border: .625em solid transparent;
+  border-bottom-color: #e5e5e5;
+}
+.discussion {
+  padding: 0 5.5% 1em;
+}
+.cl {
+  list-style: none;
+  padding: 0;
+}
+.cl li {
+  margin-bottom: 4em;
+}
+.children {
+  clear: both;
+  margin: 2em 0 0 5.5%;
+  padding-top: 1em;
+}
+.children li {
+  margin-bottom: 0;
+}
+.children > li:not(:first-child) {
+  margin-bottom: 3em;
+}
+.cn {
+  font-size: 3.5em;
+  position: absolute;
+  right: 0;
+  color: #e5e5e5;
+  z-index: 1;
+}
+/**
+ * Comment made by the author of the article being commented on
+ * Here we add generated content after the name of the author
+ */
+.bypostauthor > .c .cau h3::after {
+  content: "post author";
+  font-size: .58333333333333em;
+  color: #f3a48f;
+  padding-left: 0.25em;
+}
+.bypostauthor > .c .ctx {
+  border-color: rgba(233, 92, 51, 0.5);
+  background: rgba(233, 92, 51, 0.1);
+}
+.bypostauthor > .cn {
+  color: rgba(233, 92, 51, 0.5);
+}
+.cau {
+  margin-right: 1em;
+  padding-bottom: 0.5em;
+}
+.cau img {
+  float: left;
+  margin-right: 1em;
+}
+.cau h3 {
+  padding: 0;
+  line-height: 1.5;
+}
+.cau h3 a {
+  padding-bottom: 0;
+}
+.dati {
+  clear: both;
+  float: left;
+  margin-top: .3125em;
+}
+.ctx {
+  font-size: 1.125em;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  clear: both;
+  padding: 0 10% 0 2.5%;
+  border: 0.08em solid rgba(0, 0, 0, 0.1);
+  /* to even out the spacing between paragraphs in
+  comments and the container */
+}
+.ctx * {
+  position: relative;
+  z-index: 15;
+}
+.ctx p:first-child {
+  padding-top: 1em;
+}
+.ctx p:last-child {
+  padding-bottom: 1em;
+}
+.com {
+  clear: both;
+  padding: 0.5em 0 0 5%;
+}
+.reply {
+  top: 0.25em;
+  float: right;
+  margin-left: 1.25em;
+  z-index: 4;
+}
+.infofield {
+  font-family: "Proxima Nova Regular", "Segoe UI", "Roboto", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.comment-respond {
+  margin: 0 5.5% 2em;
+}
+.comment-respond div,
+.comment-respond form {
+  position: static;
+  margin-top: 1em;
+}
+.comment-respond p strong {
+  color: #e53b2c;
+  display: inline-block;
+}
+.comment-respond label {
+  padding-bottom: 0.5em;
+}
+.comment-form {
+  margin-bottom: 4em;
+}
+.comment-form label {
+  font-family: 'Skolar Bold', "Roboto Slab", "Droid Serif", "Cambria", Georgia, "Times New Roman", "Times", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.comment-form [type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 0.5em;
+}
+.ccr {
+  position: absolute;
+  right: 0;
+  top: 2.5em;
+}
+/**
+ * Comment Rating Plugin Styling
+ */
+.rating__container {
+  font-family: 'Proxima Nova Bold', "Segoe UI", "Roboto", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  right: 3.5em;
+}
+.rating__value {
+  margin-left: .375em;
+  top: 0.25em;
+  float: right;
+}
+.rating__value--positive {
+  color: #41B411;
+}
+.rating__value--negative {
+  color: red;
+}
+.rating__stars {
+  float: left;
+  margin: .3em .6em 0 0;
+}
+.rating__button {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  background: transparent url(../images/rating-sprite.svg) no-repeat top left;
+  background-size: 3.125em 3.125em;
+  opacity: .3;
+  -webkit-transition: all .3;
+          transition: all .3;
+}
+.rating__button:link,
+.rating__button:hover,
+.rating__button:focus,
+.rating__button:active {
+  border: 0;
+}
+.rating__button--down {
+  background-position: -0.125em -0.9em;
+}
+.rating__button--down:hover,
+.rating__button--down:focus {
+  opacity: .6;
+}
+.rating__button--up {
+  background-position: -1.875em -1em;
+  margin-right: .6em;
+}
+.rating__button--up:hover,
+.rating__button--up:focus {
+  opacity: .6;
+}
+.rating__alert {
+  padding: 0;
+}
+@media screen and (min-width: 38.125em) {
+  .cau img,
+  .cau h3 {
+    font-size: 1.5em;
+    line-height: 1.583333;
+    margin: 0 1em 0 0;
+  }
+  .cau h3 {
+    float: left;
+  }
+  .cau .dati {
+    line-height: 2.375;
+    float: none;
+    clear: none;
+    display: inline-block;
+  }
+  .cn {
+    top: -0.4em;
+  }
+}
+@media screen and (min-width: 50em) {
+  .ctx p:first-child {
+    padding-top: 1.5em;
+  }
+  .ctx p:last-child {
+    padding-bottom: 1.5em;
+  }
+}
+@media screen and (min-width: 76.25em) {
+  .adv,
+  .sub-tabs,
+  .comment-respond {
+    margin-left: 0;
+  }
+  .discussion {
+    padding-left: 0;
+  }
+}

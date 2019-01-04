@@ -1,0 +1,23 @@
+// 50em-search-results.less
+
+@media screen and (min-width:50em) {
+
+  // sections navigation not displayed on search-results page
+  .search-results-page .sn {
+    display: none;
+  }
+
+  /**
+   * as we remove the sections nav on that page
+   * the search-results may span the whole width
+   * of the content area
+   */
+  .search-results-page .main {
+    width: 100%;
+  }
+
+  // creating a bit of spacing
+  .search-results-page .post {
+    padding-left: @space;
+  }
+}

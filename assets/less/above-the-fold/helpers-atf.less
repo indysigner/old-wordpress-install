@@ -1,0 +1,23 @@
+/**
+ * Helperclasses
+ */
+
+// Clearfixing - we still do it
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+// Contents that can be invisible but need to be accessible for screenreaders
+.sr {
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+  height: .008em;
+  width: .008em;
+}

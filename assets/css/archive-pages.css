@@ -1,0 +1,157 @@
+/**
+ * archive-pages.less
+ *
+ * Any CSS only required on archive pages like categories, author-pages or tags
+ */
+/**
+ * Variables for Smashing Magazine
+ */
+/**
+ * Colors
+ *
+ */
+/* This dark gray color is the main text color */
+.bobo08 {
+  border-bottom: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+.boto08 {
+  border-top: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+.bo08 {
+  border: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+/**
+ * Mixins for Font Setting for the main css file
+ *
+ */
+/**
+ * Category Introduction for the main css file
+ */
+.poptag a {
+  color: #fff;
+}
+.poptag a:hover,
+.poptag a:focus {
+  color: #41b7d8;
+  background: #e5e5e5;
+}
+.poptag a:active {
+  top: 0.08em;
+  border-bottom: 0;
+}
+.cat h3 + p a {
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
+.coding.cat {
+  border-top-color: #63BFB2;
+}
+.coding.cat h2 {
+  color: #63BFB2;
+}
+.coding.cat p a {
+  color: #63BFB2;
+}
+.coding.cat p a:hover {
+  border-bottom-color: #63BFB2;
+}
+.coding.cat .poptag a:hover {
+  color: #63BFB2;
+  border-bottom-color: #63BFB2;
+}
+.design.cat {
+  border-top-color: #6ECE0A;
+}
+.design.cat h2 {
+  color: #6ECE0A;
+}
+.design.cat p a {
+  color: #6ECE0A;
+}
+.design.cat p a:hover {
+  border-bottom-color: #6ECE0A;
+}
+.design.cat .poptag a:hover {
+  color: #6ECE0A;
+  border-bottom-color: #6ECE0A;
+}
+.mobile.cat {
+  border-top-color: #EBD203;
+}
+.mobile.cat h2 {
+  color: #EBD203;
+}
+.mobile.cat p a {
+  color: #EBD203;
+}
+.mobile.cat p a:hover {
+  border-bottom-color: #EBD203;
+}
+.mobile.cat .poptag a:hover {
+  color: #EBD203;
+  border-bottom-color: #EBD203;
+}
+.graphics.cat {
+  border-top-color: #A675A2;
+}
+.graphics.cat h2 {
+  color: #A675A2;
+}
+.graphics.cat p a {
+  color: #A675A2;
+}
+.graphics.cat p a:hover {
+  border-bottom-color: #A675A2;
+}
+.graphics.cat .poptag a:hover {
+  color: #A675A2;
+  border-bottom-color: #A675A2;
+}
+.ux-design.cat {
+  border-top-color: #F0717C;
+}
+.ux-design.cat h2 {
+  color: #F0717C;
+}
+.ux-design.cat p a {
+  color: #F0717C;
+}
+.ux-design.cat p a:hover {
+  border-bottom-color: #F0717C;
+}
+.ux-design.cat .poptag a:hover {
+  color: #F0717C;
+  border-bottom-color: #F0717C;
+}
+.wordpress.cat {
+  border-top-color: #3E8DD2;
+}
+.wordpress.cat h2 {
+  color: #3E8DD2;
+}
+.wordpress.cat p a {
+  color: #3E8DD2;
+}
+.wordpress.cat p a:hover {
+  border-bottom-color: #3E8DD2;
+}
+.wordpress.cat .poptag a:hover {
+  color: #3E8DD2;
+  border-bottom-color: #3E8DD2;
+}
+/**
+ * Post Thumbnails on archive pages
+ */
+.pt img:active {
+  top: 0.125em;
+}
+@media screen and (min-width: 50em) {
+  .archive .main {
+    margin: 0 0 1.5em;
+  }
+}
+@media screen and (min-width: 76.25em) {
+  .archive .main {
+    margin-top: 4%;
+  }
+}

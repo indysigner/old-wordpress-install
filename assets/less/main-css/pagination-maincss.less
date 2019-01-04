@@ -1,0 +1,63 @@
+/**
+ * Pagination Styling
+ *
+ */
+
+// pagination
+.pgn {
+  padding: 0 @space @1*6;
+}
+
+// previous and next button
+.prv,
+.nxt {
+  top: @1*3.5;
+
+  a {
+    padding: @1/4 @1/2;
+
+    color: @white;
+    background: linear-gradient(to bottom, #e85c33 0%, #e53a2b 100%);
+
+    &:hover,
+    &:focus {
+      padding: @1/4 @1/2;
+      background: @dark-gray;
+    }
+
+    &:active {
+      color: rgba(0,0,0,.5);
+    }
+  }
+}
+
+.nxt {
+  text-align: right;
+  right: @space;
+}
+
+// List of pages in pagination (cur = current page)
+.pgs .current,
+.pgs a {
+  text-align: center;
+
+  width: 10%;
+  margin-right: 4%;
+  padding: @1/4 1.66667%;
+}
+
+.pgs a:last-child,
+.pgs .current:last-child {
+  margin-right: 0;
+}
+
+.pgs .current,
+.pgs a:hover,
+.pgs a:focus {
+  padding-bottom: @1/4;
+
+  color: @white;
+  background-color: @cyan;
+
+  border-radius: .1875em;
+}

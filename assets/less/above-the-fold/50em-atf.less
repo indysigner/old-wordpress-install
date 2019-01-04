@@ -1,0 +1,307 @@
+/**
+ * 50em wide displays above the fold
+ * 800px viewport width
+ *
+ */
+@media screen and (min-width: 50em) {
+
+  // Creating a 10px gap between chrome and body
+  body {
+    border-left: .625em solid transparent;
+  }
+
+  // display: none block
+  // logo container
+  .h,
+  // mobile navigation and search (targeted or not)
+  .mn,
+  .ms,
+  .mn:target,
+  .ms:target,
+  // closingbuttons after mobile navigation and search
+  .ms + .msc,
+  .mn + .mnc,
+  .ms:target + .msc,
+  .mn:target + .mnc {
+    display: none;
+  }
+
+  // Don't know about this pattern now. Could be flawed. Recheck!
+  // For accessibility on tablet and desktop devices we do not put
+  // our mobile nav buttons on display: none but only make them invisible
+  .mnb,
+  .mnb a  {
+    overflow: hidden;
+
+    top: -@1/2;
+    right: 0;
+
+    height: .01em;
+    width: .01em;
+    padding: 0;
+  }
+
+  // display: block block
+  .nw, // network nav
+  .nw a, // links in network nav
+  .ch, // social-media-icons
+  .sn, // section nav container
+  .mise // middle-search -> tablet search on top of the content
+  {
+    display: block;
+  }
+
+  // float: right block
+  .ch,
+  .main {
+    float: right;
+  }
+
+  // float: left block
+  .nw,
+  .nw li,
+  .cc,
+  .col,
+  .ch li {
+    float: left;
+  }
+
+  /**
+   * Navigation may only span that much of the header
+   * otherwise the social-media-icons would be overlapped
+   */
+  .nw {
+    width: 79%;
+
+    // Visual separator (low contrast)
+    li {
+      border-right: @08 solid rgba(0,0,0,.05);
+
+      // Links in network nav (low contrast)
+      a {
+        padding: @1*2.5 @1 @1/2;
+        height: @1*1.75;
+
+        color: rgba(0,0,0,.3);
+
+        transition:
+          color .3s,
+          background-color .3s;
+      }
+    }
+  }
+
+  // The Logo link needs a bit more space than the rest of the list-items
+  .nw .current {
+    z-index: 2;
+    width: 24%;
+
+    background: @white;
+
+    // Link around the logo needs different styles
+    a {
+      padding: @1*1.5 @1 0;
+      height: 3.3125em;
+
+      transition: none;
+
+      &:hover,
+      &:focus {
+        background-color: @white;
+      }
+    }
+
+    /**
+     * the actual img-element with src="logo" positioned to align
+     * with the text on other list-items in the network navigation
+     */
+    img {
+      position: relative;
+      top: -@1/8;
+    }
+  }
+
+  // Social Media Icons are positioned to the very right corner of the head
+  .ch {
+    margin: @1*2.5 4% 0 0;
+    z-index: 50;
+
+    li {
+      margin-left: .625em;
+
+      // on hover we raise the opacity of the background-image
+      a {
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+
+        display: block;
+        width: 1.4375em;
+        height: 1.4375em;
+
+        background-image: url(https://media-mediatemple.netdna-ssl.com/wp-content/themes/smashing-magazine/assets/images/channels.svg);
+        background-size: 353% 600%;
+        opacity: .45;
+
+        transition: all .3s;
+      }
+    }
+  }
+
+  .rss a {
+    background-position: 76% 35.5%;
+  }
+
+  .fb a {
+    background-position: 76% 62%;
+  }
+
+  .tw a {
+    background-position: 76% 90%;
+  }
+
+  .nl a {
+    background-position: 76% 9%;
+  }
+
+  // The surrounding content container spans the whole width
+  .cc {
+    width: @100;
+  }
+
+  // The articles-surrounding container takes 80% of the content width
+  .main {
+    width: 80%;
+    padding: 0;
+    margin-top: @1*1.5;
+  }
+
+  // spacing aroung form in mini search for tablets
+  .mise form {
+    margin: @1 0 @1*2 @space;
+  }
+
+  // Form elements need some adjustments
+  .mise [type="text"] {
+    height: 1.125em;
+    padding: @1 2.5%;
+  }
+
+  .mise button {
+    line-height: 3.125;
+
+    width: 17.5%;
+    height: @1*3.25;
+  }
+
+  // Sections Navigation takes the remaining 20% of the content container
+  .sn {
+    width: 20%;
+  }
+
+  // Additional Sections ul creates space on top and at the bottom
+  .sct {
+    margin: @1*2 0;
+  }
+
+  // One pixel to the left to cover up a border – looks better that way
+  .sn ul {
+    margin-left: -@08; // step back one px please
+  }
+
+  // width and style - colors comes later
+  .sn li {
+    border-left-width: .625em;
+    border-left-style: solid;
+
+    padding-bottom: @1*2.25;
+
+    transition: border-color .3s;
+
+    // needs the extra font-setting
+    a {
+      .font-proxima-nova-bold;
+
+      text-transform: uppercase;
+      letter-spacing: .175em;
+
+      color: @dark-gray;
+
+      padding: @1/4 @1/2 @1/4 @100/5;
+      display: block;
+      border-bottom: @08 solid transparent;
+
+      transition: background-color .3s;
+    }
+
+    // Second level list elements
+    li {
+      border: 0;
+      margin-left: @08;
+      padding-bottom: 0;
+
+      a {
+        .font-proxima-nova;
+
+        letter-spacing: 0;
+        text-transform: none;
+
+        color: @middle-gray;
+
+        border: 0;
+        padding-left: @100/5;
+        margin: 0;
+
+        transition:
+          color .3s,
+          background-color .3s;
+      }
+    }
+  }
+
+  // Colors for the sections nav first-level items
+  .menu-item-coding {
+    border-left-color: @coding-light;
+  }
+  .menu-item-design {
+    border-left-color: @design-light;
+  }
+  .menu-item-mobile {
+    border-left-color: @mobile-light;
+  }
+  .menu-item-graphics {
+    border-left-color: @graphics-light;
+  }
+  .menu-item-uxdesign {
+    border-left-color: @ux-light;
+  }
+  .menu-item-wordpress {
+    border-left-color: @wp-light;
+  }
+
+  // spacing for Category Intro on archive pages
+  .cat {
+    padding-left: @space;
+    padding-right: @space;
+  }
+
+  // spacing for Articles / posts
+  .post {
+    padding-left: @space*2;
+  }
+
+  // aliging adblock Content with articles
+  .blocked {
+    margin-left: @space*2
+  }
+
+  // images in articles are 500px wide
+  article img {
+    max-width: 31.25em;
+  }
+
+  // Full Width Image are spanning the whole content area
+  .fwi img {
+    max-width: 100%;
+  }
+}

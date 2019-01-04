@@ -1,0 +1,65 @@
+/**
+ * Header Styles above the fold
+ */
+
+// Header Container - 50% of the whole width
+.h {
+  z-index: 80;
+
+  width: 38.2%;
+  margin-left: @space;
+
+  padding: @1*1.25 0;
+}
+
+// Mobile Nav Buttons Container (toggle buttons)
+.mnb {
+  top: @1*1.5;
+  right: @1*1.5;
+
+  z-index: 90;
+}
+
+// Nav Toggle Button & Search Toggle Button
+.ntb,
+.stb {
+  box-sizing: border-box;
+
+  border: @08 solid @border-red;
+
+  border-radius: @1/4;
+  box-shadow: 0 @08 @08 rgba(0,0,0,0.25);
+}
+
+.stb {
+  text-indent: 150%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  padding: .4em;
+  width: 2.9375em; // 47 / 16
+}
+
+.ntb {
+  text-transform: uppercase;
+
+  margin-left: @1; // 16px
+  padding: .4em;
+
+  color: @white;
+  background: @smashing-red-2;
+}
+
+// Search Toggle Button Background Image
+.stb {
+  background:
+    url(https://media-mediatemple.netdna-ssl.com/wp-content/themes/smashing-magazine/assets/images/search-icon.png) no-repeat 50% 50%,
+    @smashing-red-2;
+
+  background:
+    url(https://media-mediatemple.netdna-ssl.com/wp-content/themes/smashing-magazine/assets/images/search-icon.svg) no-repeat 50% 50%,
+    @smashing-red-2;
+
+  background-size: 1.875em auto;
+  -webkit-background-size: 1.875em;
+}

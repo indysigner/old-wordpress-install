@@ -1,0 +1,29 @@
+// tags-below-articles.less
+
+// Tags below the articles look like buttons
+.lt {
+  margin: @1 0;
+
+  a {
+    display: inline-block;
+
+    padding: @1/4 @1/2;
+    margin: 0 .625em .625em 0;
+
+    color: @white;
+    background: @smashing-red-2;
+
+    border-radius: @1/4;
+
+    transition: all .3s;
+
+    &:hover,
+    &:focus {
+      background: @dark-gray;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

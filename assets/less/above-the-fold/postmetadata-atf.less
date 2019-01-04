@@ -1,0 +1,43 @@
+/**
+ * The metadata to posts above the fold
+ *
+ */
+
+// the metadata ul
+.pmd {
+  padding-bottom: @1*2;
+  margin: 0;
+
+  li {
+    padding-left: @1*1.5;
+    margin-top: @1;
+
+    color: rgba(0,0,0,.3);
+  }
+
+  // The author's (.a) list-item gets special treatment
+  .a {
+    padding: @1/2 @1/2 @1/2 0;
+
+    .bobo08; // see variables-atf.less
+  }
+}
+
+// linked tags in metadata
+.tags a {
+  margin: 0 @1 @1/2 0;
+  border-bottom: @08 solid transparent;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  // Commata for Tags
+  &::after {
+    content: ", ";
+  }
+
+  &:last-child::after {
+    content: "";
+  }
+}

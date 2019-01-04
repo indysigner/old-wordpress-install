@@ -1,0 +1,28 @@
+/**
+ * Header Styles for the main CSS file
+ *
+ */
+
+// Logo
+.logo a:focus,
+.logo a:active {
+  background-color: transparent;
+}
+
+// ntb = nav toggle button // stb = search toggle button
+.ntb:hover,
+.stb:hover,
+.ntb:focus,
+.stb:focus,
+.ntb:active,
+.stb:active {
+  border: @08 solid @hover-border-red;
+}
+
+.ntb:active,
+.stb:active {
+  background-color: @smashing-red;
+  box-shadow:
+    0 @08 @08 rgba(255,255,255,0.65),
+    0 -@08 @08 rgba(255,255,255,0.65);
+}

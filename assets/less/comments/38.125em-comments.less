@@ -1,0 +1,32 @@
+// 38.125em-comments-less
+
+@media screen and (min-width:38.125em) {
+
+  // Commentauthor gravatar and name
+  .cau img,
+  .cau h3 {
+    font-size: @1*1.5; // 24
+    line-height: 1.583333; // 38 / 24
+
+    margin: 0 @1 0 0; // 20 / 24
+  }
+
+  .cau h3 {
+    float: left;
+  }
+
+  // commentauthor date and time
+  .cau .dati {
+    line-height: 2.375;
+
+    float: none;
+    clear: none;
+
+    display: inline-block;
+  }
+
+  // Absolute positioned commentnumber's position adjusted
+  .cn {
+    top: -.4em;
+  }
+}

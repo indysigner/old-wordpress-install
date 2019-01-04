@@ -1,0 +1,72 @@
+/**
+ * search-results-page.less
+ *
+ * Any CSS only required on the searchresults page
+ */
+/**
+ * Variables for Smashing Magazine
+ */
+/**
+ * Colors
+ *
+ */
+/* This dark gray color is the main text color */
+.bobo08 {
+  border-bottom: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+.boto08 {
+  border-top: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+.bo08 {
+  border: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+/**
+ * Mixins for Font Setting for the main css file
+ *
+ */
+/*
+ * Google Search Page Settings
+ *
+ */
+.gsc-search-box {
+  display: none;
+}
+#cse-search-results {
+  width: auto;
+  max-height: 2110px;
+  padding-top: 2em;
+}
+#cse-search-results iframe {
+  width: 100%;
+  max-width: 100%;
+  min-height: 2110px;
+  max-height: 2110px;
+}
+.gsc-thinWrapper {
+  width: auto;
+}
+.search-results {
+  border-bottom: 0;
+}
+@media screen and (min-width: 50em) {
+  .search-results-page .sn {
+    display: none;
+  }
+  /**
+   * as we remove the sections nav on that page
+   * the search-results may span the whole width
+   * of the content area
+   */
+  .search-results-page .main {
+    width: 100%;
+  }
+  .search-results-page .post {
+    padding-left: 5.5%;
+  }
+}
+@media screen and (min-width: 100em) {
+  .search-results-page .post {
+    padding-left: 11%;
+    padding-right: 11%;
+  }
+}

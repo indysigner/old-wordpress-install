@@ -1,0 +1,129 @@
+/**
+ * 76.25em wide displays above the fold
+ * 1220px viewport width
+ *
+ */
+@media screen and (min-width: 76.25em) {
+
+  // Network Navigation spanning 50% of the head width
+  .nw {
+    width: @100/2;
+
+    // Logo Container list-item
+    .current {
+      width: 29%;
+
+      // Logo image tag
+      img {
+        top: -.4375em;
+      }
+    }
+  }
+
+  // Content Container surrounding articles
+  .main {
+    width: 78%;
+    margin-top: 1.8%;
+  }
+
+  // Archive main container needs additional top spacing
+  .archive .main {
+    margin-top: 4%;
+  }
+
+  // Articles
+  .post {
+    padding-top: 0;
+  }
+
+  // Sections Navigation
+  .sn {
+    width: 22%;
+    margin-top: 4%;
+
+    ul {
+      margin: 0;
+      padding: 0 2.5% 0 0;
+
+      border-bottom: 0;
+    }
+
+    // Switching border to the left again
+    li {
+      border-bottom: 0;
+      border-right: 0;
+      border-left-width: .625em;
+      border-left-style: solid;
+
+      float: none;
+
+      margin-bottom: 0;
+      padding-bottom: 2.25em;
+
+      a {
+        font-size: @1;
+
+        border: none;
+        border-bottom: @08 solid transparent;
+
+        padding: @1/4 @1/2 @1/4 @100/4;
+      }
+
+      ul {
+      padding: 0;
+      margin-left: -@08;
+      display: block;
+
+        li {
+          padding-bottom: 0;
+          border: 0;
+
+          a {
+            margin-top: 0;
+            padding-left: @100 / 4;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Container inside sections nav
+  .sct {
+    margin: 0 0 @1;
+
+    z-index: 99;
+  }
+
+  .menu-item-coding {
+    border-left-color: @coding-light;
+  }
+  .menu-item-design {
+    border-left-color: @design-light;
+  }
+  .menu-item-mobile {
+    border-left-color: @mobile-light;
+  }
+  .menu-item-graphics {
+    border-left-color: @graphics-light;
+  }
+  .menu-item-uxdesign {
+    border-left-color: @ux-light;
+  }
+  .menu-item-wordpress {
+    border-left-color: @wp-light;
+  }
+
+  // Aligning Category Intro with content below
+  .cat {
+    margin-top: 0;
+
+    padding-left: @space;
+    padding-right: @space;
+  }
+
+  // Social Networking Icons are not stuck to the right corner of the screen
+  .ch {
+    margin-right: 28.125em;
+  }
+}

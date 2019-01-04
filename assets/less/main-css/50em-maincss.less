@@ -1,0 +1,134 @@
+/**
+ * 50em wide displays
+ * 800px
+ */
+@media screen and (min-width:50em) {
+
+  .mn, // mobile nav
+  .ms, // mobile search
+  .mn:target,
+  .ms:target,
+  .mn:target + .mnc, // mobile nav closing button
+  .ms:target + .msc, // mobile search closing button
+  {
+    display: none;
+  }
+
+  // Header Stuff
+  // network nav
+  .nw li a:hover,
+  .nw li a:focus,
+  .nw .current_page_item a {
+    color: rgba(0,0,0,.6);
+    background-color: @yellow;
+
+    padding-bottom: @1/2;
+  }
+
+  // Logo in the network navigation
+  .nw .current a:hover,
+  .nw .current a:focus {
+    background: @white;
+
+    padding-bottom: 0;
+  }
+
+  // books mascot as background image for ebooks link
+  .nw li.cody a {
+    background-image: url(../images/cody.svg);
+    background-repeat: no-repeat;
+    background-position: right @1/4;
+    background-size: 2.25em auto;
+  }
+
+  // social media icons
+  .ch li a:hover,
+  .ch li a:focus {
+    opacity: 1;
+  }
+  .ch li a:active {
+    background-color: transparent;
+  }
+
+  // Sections Navigation link elements
+  .sn li:hover a,
+  .sn li:focus a {
+    .bobo08; // see variables-maincss.less
+
+    padding-bottom: @1/4;
+  }
+
+  // second level link elements in section navigation while hovering over first-level li's
+  .sn li:hover li a,
+  .sn li:focus li a {
+    color: @dark-gray;
+
+    border-bottom: 0;
+  }
+
+  // first level links behaviour
+  .sn li a:hover,
+  .sn li a:focus {
+    background: @yellow;
+  }
+
+  // second level links behaviour
+  .sn li li:hover a,
+  .sn li li:focus a {
+    color: @dark-gray;
+  }
+
+  // when you're on a page that matches a link in the sections navigation
+  .current-menu-item > a {
+    color: @dark-gray;
+    background: @yellow;
+
+    border-bottom: 0;
+  }
+
+  .menu-item-coding:hover,
+  .menu-item-coding.current-menu-item {
+    border-left-color: @coding;
+  }
+
+  .menu-item-design:hover,
+  .menu-item-design.current-menu-item {
+    border-left-color: @design;
+  }
+
+  .menu-item-mobile:hover,
+  .menu-item-mobile.current-menu-item {
+    border-left-color: @mobile;
+  }
+
+  .menu-item-graphics:hover,
+  .menu-item-graphics.current-menu-item {
+    border-left-color: @graphics;
+  }
+
+  .menu-item-uxdesign:hover,
+  .menu-item-uxdesign.current-menu-item {
+    border-left-color: @ux;
+  }
+
+  .menu-item-wordpress:hover,
+  .menu-item-wordpress.current-menu-item {
+    border-left-color: @wp;
+  }
+
+  .menu-item-wordpress a::after {
+    content: "\0020";
+    display: table;
+    clear: both;
+  }
+
+  // Homepage Content Ad (after second article excerpt)
+  .hpa {
+    padding-left: @space*2;
+  }
+
+  // View more job openings button
+  .wg .cr {
+    margin: 0;
+  }
+}

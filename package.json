@@ -1,0 +1,33 @@
+{
+  "name": "smashing-magazine",
+  "version": "0.1.0",
+  "author": "Marco Kunz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inpsyde/smashing-magazin.git"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.0",
+    "doxdox": "^0.1.14",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "*",
+    "grunt-browserify": "^3.8.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-lineending": "^0.2.4",
+    "matchdep": "*"
+  },
+  "dependencies": {
+    "fastclick": "^1.0.6",
+    "layzr.js": "^2.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/inpsyde/smashing-magazin/issues"
+  },
+  "homepage": "https://github.com/inpsyde/smashing-magazin#readme",
+  "main": "gruntfile.js"
+}

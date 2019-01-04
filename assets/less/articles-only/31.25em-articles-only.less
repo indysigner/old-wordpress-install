@@ -1,0 +1,39 @@
+// 31.25em-articles-only.less
+
+@media screen and (min-width: 31.25em) {
+
+  // tables for authors
+  .four-columns td,
+  .five-columns td,
+  .six-columns td {
+    display: table-cell;
+
+    padding: .85em @1;
+
+    .bo08; // see variables-maincss.less
+  }
+
+  .four-columns tr,
+  .five-columns tr,
+  .six-columns tr {
+    display: table-row;
+  }
+
+  // Call to Action button
+  .options {
+    display: table;
+    width: 100%;
+
+    > div {
+      display: table-cell;
+    }
+
+    small {
+      margin-bottom: @1*2;
+    }
+
+    .pre-order-now {
+      width: 80%;
+    }
+  }
+}

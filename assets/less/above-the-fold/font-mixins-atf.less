@@ -1,0 +1,45 @@
+/**
+ * Mixins for Font Setting above the fold
+ *
+ */
+
+// Skolar Font Settings and fallbacks
+.font-skolar(@font-family: "Skolar Regular", @font-weight: 400, @font-style: normal) {
+  font-family: @font-family, "Roboto Slab", "Droid Serif", "Cambria", Georgia, "Times New Roman", "Times", serif;
+  font-weight: @font-weight;
+  font-style: @font-style;
+}
+
+.font-skolar-italic() {
+  .font-skolar('Skolar Italic', 400, italic);
+}
+
+.font-skolar-bold() {
+  .font-skolar('Skolar Bold', 700);
+}
+
+// Proxima Nova Settings and Fallbacks
+.font-proxima-nova(@font-family: "Proxima Nova Regular", @font-weight: 400, @font-style: normal) {
+  font-family: @font-family, "Segoe UI", "Roboto", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+  font-style: @font-style;
+  font-weight: @font-weight;
+}
+
+.font-proxima-nova-italic() {
+  .font-proxima-nova('Proxima Nova Italic', 400, italic);
+}
+
+.font-proxima-nova-bold() {
+  .font-proxima-nova('Proxima Nova Bold', 700);
+}
+
+// Special Mixin for h2 and h3 headlines only
+.special(@font-family: "Skolar Bold", @font-weight: 700, @font-style: normal) {
+  font-family: @font-family, "Segoe UI Bold", "Roboto Slab", "Droid Serif", AvenirNext-Bold, "Avenir Bold", Georgia, "Times New Roman", Times, serif;
+  font-weight: @font-weight;
+  font-style: @font-style;
+}
+
+.special-italic() {
+  .special('Skolar Bold Italic', 700, italic);
+}

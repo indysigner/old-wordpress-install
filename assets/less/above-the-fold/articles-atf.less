@@ -1,0 +1,107 @@
+/**
+ * Article Styling above the fold
+ */
+.cc,
+.post {
+  margin-bottom: @1*2;
+}
+
+.fluid {
+  padding-bottom: @1*1.5;
+
+  background-color: @white;
+
+  box-shadow: 0 0 .625em @08 rgba(0,0,0,.05);
+}
+
+.grid {
+  margin-top: @1*1.25;
+}
+
+// Article Container <article>
+.post {
+  padding: @1/2 @space @1*4;
+  border-bottom: .3125em solid @cyan;
+}
+
+// Main Headline for articles
+h2 {
+  font-size: @1*2;
+  line-height: 1.1;
+
+  a {
+    color: @dark-gray;
+  }
+}
+
+// Catch Headline above the main headline
+.cahe {
+  font-size: .45em;
+  line-height: 1.5;
+  letter-spacing: @08;
+
+  padding-bottom: @1/2;
+
+  color: @cyan;
+}
+
+// general line-height & font-size on paragraphs inside articles
+article {
+  line-height: 1.55;
+
+  // slightly raising the font-size for body-copy - readability improvement
+  p {
+    font-size: 1.125em; // 18 / 16
+  }
+}
+
+// even bigger font-size in first paragraph and for author list-item in meta
+.pmd .a,
+.pmd + p,
+.ed + p {
+  font-size: 1.375em; // 22 / 16
+  line-height: 1.35;
+
+  margin: 0;
+}
+
+// third level headline inside articles
+h3 {
+  font-size: 1.625em; // 26 / 16
+  line-height: 1.3;
+}
+
+// fourth level headline inside articles
+h4 {
+  font-size: 1.125em;
+  letter-spacing: .125em;
+}
+
+h3,
+h4 {
+  padding: @1*1.5 0 @1/2;
+}
+
+// Catch-Headlines and h4s are displayed in all uppercase
+.cahe,
+h4 {
+  text-transform: uppercase;
+}
+
+// Spacing for paragraphs, images and figures
+p,
+p img,
+figure img {
+  padding: @1/2 0;
+}
+
+// figures need a little more spacing
+figure {
+  margin: @1 0;
+}
+
+// Mailchimp Counterimage below the form in the sidebar and in articles
+.mcc {
+  padding-top: @1;
+  width: 12.5em; // 200 / 16
+}

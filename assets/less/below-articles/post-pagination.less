@@ -1,0 +1,69 @@
+// post-pagination.less
+
+// post-pagination
+.popa {
+  padding-bottom: @1*2;
+}
+
+// prev next link container inside the post-pagination
+.arrows {
+  .font-proxima-nova-bold;
+  font-size: .875em;
+
+  position: relative;
+
+  margin: 0 auto @1*1.5;
+
+  // List of Pages in the post-pagination
+  .pgs {
+    text-align: center;
+
+    margin-top: @1/4;
+    width: @100/2;
+  }
+
+  // "Previous" and "Next" Buttons in the post-pagination
+  .nxt,
+  .prv {
+    position: static;
+
+    width: @100/4;
+  }
+}
+
+// pagination page
+.pap {
+  margin-bottom: @1;
+
+  // Current page
+  &.now {
+    font-size: @1;
+
+    &:hover strong {
+      color: @dark-gray;
+    }
+  }
+}
+
+.pap strong,
+.pap.now {
+  color: @dark-gray;
+}
+
+.pap a:hover strong {
+  color: @cyan;
+}
+
+// Post Pagination
+.po-pa hr {
+  clear: both;
+}
+
+// post pagination pages list
+.arrows .pgs,
+// post pagination "next" button
+.arrows .nxt,
+// post pagination "previous" button
+.arrows .prv {
+  float: left;
+}

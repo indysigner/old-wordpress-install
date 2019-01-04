@@ -1,0 +1,400 @@
+/*! Tablesaw - v1.0.2 - 2014-12-17
+* https://github.com/filamentgroup/tablesaw
+* Copyright (c) 2014 Filament Group; Licensed MIT */
+
+table.tablesaw {
+	empty-cells: show;
+	max-width: 100%;
+	width: 100%;
+	font-size: .875em;
+}
+
+.tablesaw {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+/* Structure */
+
+.tablesaw {
+	border: 0;
+	padding: 0;
+}
+
+.tablesaw th,
+.tablesaw td {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: .5em .7em;
+}
+
+.tablesaw thead tr:first-child th {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	color: #333;
+}
+
+.tablesaw-enhanced .tablesaw-bar .btn {
+	border: 1px solid #c73a11;
+	background: none;
+	background-color: #e95c33;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,1);
+	box-shadow: 0 1px 0 rgba(255,255,255,1);
+	color: #fff;
+	clear: both;
+	cursor: pointer;
+	display: block;
+	font: bold 20px/1 sans-serif;
+	margin: 0;
+	padding: .5em .85em .4em .85em;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: capitalize;
+	text-shadow: 0 1px 0 #fff;
+	width: 100%;
+	/* Theming */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba( 255,255,255,.1 )), color-stop(50%, rgba( 255,255,255,.1 )), color-stop(55%, rgba( 170,170,170,.1 )), to(rgba( 120,120,120,.15 )));
+	background-image: -webkit-linear-gradient(top, rgba( 255,255,255,.1 ) 0%, rgba( 255,255,255,.1 ) 50%, rgba( 170,170,170,.1 ) 55%, rgba( 120,120,120,.15 ) 100%);
+	background-image: linear-gradient( top, rgba( 255,255,255,.1 ) 0%, rgba( 255,255,255,.1 ) 50%, rgba( 170,170,170,.1 ) 55%, rgba( 120,120,120,.15 ) 100% );
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: .25em;
+}
+
+.tablesaw-enhanced .tablesaw-bar a.btn {
+	color: #1c95d4;
+}
+
+.tablesaw-enhanced .tablesaw-bar .btn:hover {
+	text-decoration: none;
+}
+
+/* Default radio/checkbox styling horizonal controlgroups. */
+
+.tablesaw-enhanced .tablesaw-bar .btn:active {
+	background-color: #e53b2c;
+	box-shadow:
+    0 .08em .08em rgba(255,255,255,0.65),
+    0 -.08em -.08em rgba(255,255,255,0.65);
+}
+
+.tablesaw-enhanced .tablesaw-bar .btn:hover,
+.tablesaw-enhanced .tablesaw-bar .btn:focus {
+	border-color: #940700;
+	outline: none;
+}
+
+.ie-lte8 .tablesaw-bar .btn:hover,
+.ie-lte8 .tablesaw-bar .btn:focus {
+	color: #fff;
+	outline: none;
+}
+
+.tablesaw-bar .btn.btn-small,
+.tablesaw-bar .btn.btn-micro {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	position: relative;
+	top: 0;
+}
+
+.tablesaw-bar .btn.btn-small {
+	font-size: 1.0625em;
+	line-height: 19px;
+	padding: .3em 1em .3em 1em;
+}
+
+.tablesaw-bar .btn.btn-micro {
+	font-size: .8125em;
+	padding: .4em .7em .25em .7em;
+}
+
+.tablesaw-bar .btn-select.btn-small,
+.tablesaw-bar .btn-select.btn-micro {
+	padding-right: 1.5em;
+}
+
+/* Column navigation buttons for swipe and columntoggle tables */
+
+.tablesaw-advance .btn {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-shadow: 0 1px 0 #fff;
+	border-radius: .25em;
+}
+
+.tablesaw-advance .btn.btn-micro {
+	font-size: .8125em;
+	padding: .3em .7em .25em .7em;
+}
+
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn {
+	display: inline-block;
+	overflow: hidden;
+	width: 1.8em;
+	height: 1.8em;
+	background-position: 50% 50%;
+	margin-left: .5em;
+	position: relative;
+}
+
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.left:before,
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.right:before,
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.down:before,
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.up:before {
+	content: "\0020";
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.down:before {
+	left: .5em;
+	top: .65em;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #fff;
+}
+
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.up:before {
+	left: .5em;
+	top: .65em;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #fff;
+}
+
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.left:before,
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.right:before {
+	top: .45em;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.left:before {
+	left: .6em;
+	border-right: 5px solid #fff;
+}
+
+.tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.right:before {
+	left: .7em;
+	border-left: 5px solid #fff;
+}
+
+.tablesaw-advance a.tablesaw-nav-btn.disabled {
+	opacity: .25;
+	filter: alpha(opacity=25);
+	cursor: default;
+	pointer-events: none;
+}
+
+/* Table Toolbar */
+
+.tablesaw-bar {
+	clear: both;
+	font-family: sans-serif;
+}
+
+.tablesaw-toolbar {
+	font-size: .875em;
+	float: left;
+}
+
+.tablesaw-toolbar label {
+	padding: .5em 0;
+	clear: both;
+	display: block;
+	color: #888;
+	margin-right: .5em;
+	text-transform: uppercase;
+}
+
+.tablesaw-bar .btn,
+.tablesaw-enhanced .tablesaw-bar .btn {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.tablesaw-bar .tablesaw-toolbar .btn {
+	margin-left: .4em;
+	margin-top: 0;
+	text-transform: uppercase;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: transparent;
+	font-family: sans-serif;
+	font-size: 1em;
+	padding-left: .3em;
+}
+
+.tablesaw-toolbar ~ table {
+	clear: both;
+}
+
+.tablesaw-toolbar .a11y-sm {
+	clip: rect(0 0 0 0);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+
+.tablesaw + figcaption {
+	text-align: left;
+	margin-top: 1em;
+}
+
+@media (min-width: 24em) {
+	.tablesaw-toolbar .a11y-sm {
+		clip: none;
+		height: auto;
+		width: auto;
+		position: static;
+		overflow: visible;
+	}
+}
+
+table.tablesaw thead th,
+table.tablesaw thead td {
+	color: #fff;
+	font-size: .9em;
+}
+
+.tablesaw th,
+.tablesaw td {
+	line-height: 1.3em;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.tablesaw td,
+.tablesaw tbody th {
+	vertical-align: middle;
+	font-size: 1.17em;
+	/* 19px */
+}
+
+.tablesaw td .btn,
+.tablesaw tbody th .btn {
+	margin: 0;
+}
+
+.tablesaw thead {
+	border-top: 1px solid #ababab;
+	border-bottom: 1px solid #ababab;
+	background: #e5e5e5;
+}
+
+.tablesaw thead th {
+	font-family: 'Proxima Nova Bold',"Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	color: #333;
+	text-transform: uppercase;
+	text-align: left;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.tablesaw thead tr:first-child th.tablesaw-cell-persist {
+	border-right: 1px solid #ababab;
+}
+
+/* Table rows have a gray bottom stroke by default */
+
+.tablesaw tbody tr {
+	border-bottom: 1px solid #ababab;
+}
+
+.tablesaw tbody tr:nth-child(even) {
+	background: #f0f0f0;
+}
+
+.tablesaw caption {
+	text-align: left;
+	margin-bottom: 0;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	line-height: 2.4;
+}
+
+@media (min-width: 25em) {
+	.tablesaw caption {
+		margin-bottom: .6em;
+		line-height: 1.2;
+	}
+}
+
+@media (min-width: 40em) {
+	.tablesaw td {
+		line-height: 2em;
+	}
+}
+
+@media only all {
+	.tablesaw-swipe .tablesaw-cell-persist {
+		border-right: 1px solid #ababab;
+	}
+}
+
+.tablesaw-fix-persist {
+	table-layout: fixed;
+}
+
+@media only all {
+	/* Unchecked manually: Always hide */
+
+	.tablesaw-swipe th.tablesaw-cell-hidden,
+	.tablesaw-swipe td.tablesaw-cell-hidden {
+		display: none;
+	}
+}
+
+.tablesaw-advance {
+	float: right;
+}
+
+.tablesaw-advance.minimap {
+	margin-right: .4em;
+	top: -.25em;
+}
+
+.tablesaw-advance-dots {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tablesaw-advance-dots li {
+	display: table-cell;
+	margin: 0;
+	padding: .4em .2em;
+}
+
+.tablesaw-advance-dots li i {
+	width: .25em;
+	height: .25em;
+	background: #e53b2c;
+	border-radius: 100%;
+	display: inline-block;
+}
+
+.tablesaw-advance-dots-hide {
+	opacity: .25;
+	filter: alpha(opacity=25);
+	cursor: default;
+	pointer-events: none;
+}
+

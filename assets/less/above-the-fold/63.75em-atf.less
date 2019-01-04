@@ -1,0 +1,309 @@
+/**
+ * 63.75em wide displays above the fold
+ * 1020px viewport width
+ *
+ */
+@media screen and (min-width: 63.75em) {
+
+  // display: none block
+  // Search for tablets
+  .mise,
+  // Sections Nav sub-ul
+  .sn li ul {
+    display: none;
+  }
+
+  // display: block for sidebar and search inside sidebar
+  .sb,
+  .sb .sf {
+    display: block;
+  }
+
+  // Float left
+  .sn li, // sections nav list-items
+  .so img // images in our self-promo-container in the sidebar
+  {
+    float: left;
+  }
+
+  // Clear
+  .bnnr-list, // ul containing ads in the sidebar
+  .wg // widget container in the sidebar
+  {
+    clear: both;
+  }
+
+  // adjusting the size of the Logo in network-nav list-item
+  .nw .current {
+    width: 21%;
+  }
+
+  // aligning Social Media Icons with right end of search
+  .ch {
+    margin-right: @1;
+  }
+
+  // Main Content Area now full width and under sections nav
+  .main {
+    width: @100;
+
+    margin-top: -@1/2;
+  }
+
+  // Spacing for Articles
+  .post {
+    padding-left: @space;
+  }
+
+  // Align Adblock Content with articles
+  .blocked {
+    margin-left: @space;
+  }
+
+  // Sections Navigation now on top of content
+  .sn {
+    width: @100;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    ul {
+      margin: @1 0 0;
+      padding: 0 0 0 @space;
+
+      border-bottom: .3125em solid rgba(0,0,0,.06);
+    }
+
+    li {
+      border-left-width: 0;
+      border-right: @08 solid @light-gray;
+      border-bottom-width: .3125em;
+      border-bottom-style: solid;
+
+      margin-bottom: -.3125em;
+      padding-bottom: 0;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      a {
+        font-size: .75em;
+
+        border: 0;
+        padding: .75em .9em;
+      }
+    }
+  }
+
+  .sct {
+    margin-top: -@1/2;
+  }
+
+  .menu-item-coding {
+    border-bottom-color: @coding-light;
+  }
+  .menu-item-design {
+    border-bottom-color: @design-light;
+  }
+  .menu-item-mobile {
+    border-bottom-color: @mobile-light;
+  }
+  .menu-item-graphics {
+    border-bottom-color: @graphics-light;
+  }
+  .menu-item-uxdesign {
+    border-bottom-color: @ux-light;
+  }
+  .menu-item-wordpress {
+    border-bottom-color: @wp-light;
+  }
+
+  // Main Heading for all articles/pages/posts
+  h2 {
+    padding-top: @1/2;
+  }
+
+  // Content Container shifts to the right
+  .cc {
+    margin-right: -28.125em;
+  }
+
+  // Container inside content container reverts the above
+  .fluid {
+    margin-right: 28.125em;
+
+    border-radius: 0 .625em .625em 0;
+  }
+
+  // Category Container aligns with contents below
+  .cat {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: @1*2;
+    margin-right: @space;
+  }
+
+  // Sidebar Styling
+  .sb {
+    z-index: 3; // Got a z-index of 3 to overlap the nav (nav has z-index: 2)
+
+    // Searchform in sidebar - overwriting settings for other searchforms
+    .sf form {
+      margin: 0;
+    }
+
+    // Label on searchform in sidebar
+    .sf .sl {
+      padding: @1*2 0 .125em;
+    }
+
+    .sf [type="text"] {
+      height: @1*1.5;
+      padding: .375em 0 .375em 2%;
+    }
+
+    .sf button {
+      line-height: 2.25;
+
+      width: 23%;
+      height: 2.375em;
+    }
+  }
+
+  // Container inside sidebar has a width of 420px ALVASE!
+  .side {
+    padding: 0 0 0 1.25em;
+    width: 26.25em; // 420px
+    top: -3.325em; // ~53px to align the top of the search input with the content container
+  }
+
+  // Banner Wrapper Container
+  .bw {
+    margin: 0 0 1.25em;
+
+    // Advertise with us! Link above ads
+    .awithus {
+      margin-right: @1/2;
+    }
+
+    p {
+      padding-top: 0;
+    }
+  }
+
+  // First banner block is different as it needs extra spacing
+  .faw {
+    margin-top: @1*1.5;
+  }
+
+  // Ads are listed - each list-element contains an ad
+  .bnnr-list li {
+    font-size: .75em;
+    text-align: center;
+
+    width: 48%;
+    display: inline-block;
+    margin: 0 2% @1 0;
+  }
+
+  // No underline for ad-links
+  .bnnr-list a {
+    border-bottom: 0;
+  }
+
+  // Ads spanning the whole width of the sidebar - explicit width
+  .bnnr-list .double {
+    width: 34.16667em;
+  }
+
+  // Sidebar Widget Container
+  .wg {
+    margin: @1*1.5 0 @1*1.5 -1.25em;
+    padding: 0 1.25em @1*2;
+
+    .bo08;
+    border-left: 0;
+
+    background: rgba(255,255,255,.55);
+
+    border-radius: 0 .625em .625em 0;
+
+    // Newsletter Form in the sidebar
+    form {
+      margin: .75em 0 @1;
+    }
+
+    // Lists and headings inside the widgets containers (jobboard widget)
+    li {
+      list-style: none;
+
+      padding: @1 0;
+    }
+
+    // Widget Headlines (newsletter, jobboard)
+    h3 {
+      padding-left: @1*2.5;
+      position: relative;
+
+      a {
+        position: relative;
+      }
+
+      // Icons next to the headlines in sidebar containers (widgets)
+      img {
+        position: absolute;
+        left: -@1*2.5;
+        top: 0;
+      }
+    }
+  }
+
+  // Newsletter Input
+  .sb .mcf input {
+    width: 66%;
+
+    // NewsletterForm Submitbutton
+    + .submit {
+      width: 30%;
+    }
+  }
+
+  // Widget list-items and divs
+  .wg li,
+  .so div {
+    border-bottom: @08 solid rgba(0,0,0,.05);
+  }
+
+  // Widget divs
+  .so div {
+    margin-top: @1/2;
+  }
+
+  // Widget Pararaphs
+  .so p {
+    line-height: 1.55;
+    overflow: hidden;
+
+    padding-top: 1.125em;
+  }
+
+  // Widget Images
+  .so img {
+    overflow: hidden;
+
+    margin: @1*1.5 @1*1.5 0 0;
+
+    border-radius: @1/2;
+  }
+
+  // First Widget Container
+  .fir {
+    padding: 0 @1*1.5 @1*1.75 0;
+  }
+
+  // Second Widget Container
+  .sec {
+    padding-bottom: @1*1.75;
+  }
+}

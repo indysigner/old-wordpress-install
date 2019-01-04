@@ -1,0 +1,42 @@
+/**
+ * 100em wide displays
+ * 1600px
+ */
+
+@media screen and (min-width:100em) {
+
+  // pagination
+  .pgn,
+  // Homepage Ad needs padding adjustment
+  .hpa {
+    padding-left: @space*2;
+    padding-right: @space*2;
+  }
+
+  // positioning meta icons
+  // rd = release date
+  .rd {
+    background-position: 0 .7em;
+  }
+  .tags {
+    background-position: 0 -1.5em;
+  }
+  .comments {
+    background-position: 0 -3.7em;
+  }
+
+  // Aligning the footer with the content area
+  .f {
+    margin-right: @1*26;
+  }
+
+  // Media Temple Logo position
+  .mt img {
+    padding-top: @1*1.6;
+  }
+
+  // Skyscraper Shaped Ad Banner
+  #sidebar_sky-2 {
+    margin-left: @1*5;
+  }
+}

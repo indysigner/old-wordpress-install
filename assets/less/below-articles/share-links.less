@@ -1,0 +1,53 @@
+// share-links.less
+
+// Share Links beneath articles (Facebook, Twitter)
+.sot {
+  font-size: .9em;
+
+  display: inline-block;
+
+  margin: @1 @1 0 0;
+  padding: @1/4 @1/2;
+  border: 0;
+
+  color: @white;
+  background: #55acee;
+  border-radius: @1/4;
+
+  &:hover,
+  &:focus {
+    border: 0;
+    background: #55acee + #111;
+  }
+
+  &:active {
+    border: 0;
+    background: #55acee - #111;
+  }
+
+  // Share on Facebook
+  + .sot {
+    background: #415e9b;
+
+    &:hover,
+    &:focus {
+      border: 0;
+      background: #415e9b + #111;
+    }
+
+    &:active {
+      border: 0;
+      background: #415e9b - #111;
+    }
+  }
+}
+
+// Degreed Button
+.degreed {
+  margin-top: 2.25em;
+
+  .declare {
+    float: none;
+    display: block;
+  }
+}

@@ -1,0 +1,62 @@
+/**
+ * contact.less
+ *
+ * Any CSS only required on the contact page
+ */
+/**
+ * Variables for Smashing Magazine
+ */
+/**
+ * Colors
+ *
+ */
+/* This dark gray color is the main text color */
+.bobo08 {
+  border-bottom: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+.boto08 {
+  border-top: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+.bo08 {
+  border: 0.08em solid rgba(0, 0, 0, 0.1);
+}
+/**
+ * Mixins for Font Setting for the main css file
+ *
+ */
+.smashform {
+  margin-top: 3.5em;
+}
+.smashform [type="text"],
+.smashform textarea {
+  width: 90%;
+  color: #333;
+  border-radius: 0.5em;
+}
+.smashform p {
+  padding: 1em 0 0;
+}
+.smashform label {
+  padding: 0 .625em .75em 0;
+}
+fieldset {
+  margin-bottom: 2.5em;
+  padding: 1em;
+  border: 0.08em solid #d9e7ed;
+  border-top-width: 0.25em;
+  border-radius: 0.25em;
+}
+legend {
+  font-family: "Skolar Regular", "Roboto Slab", "Droid Serif", "Cambria", Georgia, "Times New Roman", "Times", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  padding: 0 0.5em;
+  color: #333;
+}
+.radio {
+  position: relative;
+  top: -0.25em;
+  margin-right: 0.5em;
+  border: 0;
+}

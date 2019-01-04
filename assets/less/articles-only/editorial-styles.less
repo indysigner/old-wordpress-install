@@ -1,0 +1,450 @@
+/**
+ * Stuff (classes) authors can use in articles
+ */
+
+ // Toggle Table on Books Page – mostly Table of Contents
+ // .ttoc = toggle table of contents
+.ttoc {
+  width: 100%;
+  margin: @1 0;
+  .bo08;
+
+  th {
+    font-size: 1.125em;
+    letter-spacing: .08em;
+    color: #595959;
+  }
+
+  td {
+    padding: .375em .9375em;
+    .bobo08;
+  }
+
+  tr:hover {
+    cursor: pointer;
+  }
+
+  tr:active {
+    color: @white;
+    background-color: @dark-gray;
+  }
+}
+
+/* Infobox - a tr with Summary & Keywords */
+.infobox {
+  border-top: @1/8 solid rgba(0,0,0,.04);
+
+  background-color: rgba(0,0,0,.02);
+
+  td {
+    padding: 3.5% 5% 2.5% 5%;
+  }
+}
+
+/* Summary text */
+.keywords {
+  border-top: .08em solid rgba(0,0,0,.05);
+  padding-top: @1;
+  margin: @1 auto @1/2;
+
+  // inside tables of content we got bullets
+  .lead {
+    color: #4cf;
+  }
+}
+
+.lead {
+  font-size: .9em;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+
+  color: #EF7309;
+}
+
+/* A triangle pointing downwards and when active upwards - suggesting a toggle */
+.arrow {
+  top: .6em;
+
+  width: 0;
+  height: 0;
+  border-left: .375em solid transparent;
+  border-right: .375em solid transparent;
+  border-top: .375em solid rgba(0,0,0,0.4);
+
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    border-top: .375em solid rgba(0,0,0,0.45);
+  }
+
+  &.up {
+    top: .5625em;
+
+    width: 0;
+    height: 0;
+    border-top: 0;
+    border-bottom: .375em solid #EF7309;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: rgba(0,0,0,0.45);
+    }
+  }
+}
+
+/**
+ * Smashing Mystery Designer Guillaume is always aligned to the right
+ * Authors are sometimes as well: PPK & Paul Boag
+ */
+.designer {
+  float: right;
+  max-width: 38.2%;
+  margin: -.5em 0 @1 @1;
+}
+
+/**
+ * In order to keep the aspect ratio for embeddded content
+ * on a responsive website you put a container around it with
+ * the following styles attached.
+ */
+.aspect-ratio {
+  overflow: hidden;
+
+  padding: 1.875em 0 56.25%;
+  margin: @1*1.5 auto;
+  max-width: 100%;
+  height: auto;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/**
+ * Table overview is an older class you could throw at some table
+ * Yet, all tables have some border around them
+ */
+.table-overview,
+.table-overview td,
+.table-overview th,
+.article-table {
+  .bo08; // see variables-maincss.less
+}
+.table-overview {
+  width: @100;
+  margin: @1 0;
+
+  td,
+  th {
+    text-align: left;
+
+    padding: @1/2 .9375em;
+
+    border-left: 0;
+    border-top: 0;
+  }
+}
+
+.table-overview th,
+.article-table thead {
+  background-color: @light-gray;
+}
+
+// Responsive Tables for authors
+.article-table {
+  .font-proxima-nova;
+  font-size: @1;
+
+  max-width: @100;
+  height: auto;
+  margin: 1.875em 0 2.5em;
+
+  caption {
+    margin: @1/2 0;
+
+    color: @smashing-red;
+  }
+
+  thead {
+    text-align: left;
+    border-bottom: .09em solid rgba(0,0,0,.05);
+  }
+
+  th {
+    font-size: 1.1em;
+  }
+
+  tr {
+    display: table-cell;
+    padding: .3em;
+  }
+
+  td {
+    display: table-row;
+
+    padding: .85em @1;
+    border: 0;
+  }
+
+  tr:nth-of-type(odd) {
+    background: #F2F2F2;
+  }
+}
+
+.three-columns td,
+.two-columns td {
+  display: table-cell;
+  padding: .85em @1;
+  .bo08; // see variables-maincss.less
+}
+
+.three-columns tr,
+.two-columns tr {
+  display: table-row;
+}
+
+// Codepen embeds need some top-margin
+.cp_embed_iframe {
+  margin-top: @1;
+}
+
+// Bulletpoints in Imprint Page
+.bull {
+  color: #e6492f;
+
+  padding: 0 @1/4;
+}
+
+// Buy Buttons
+.options,
+.shop-that {
+  text-align: center;
+
+  small {
+    font-size: @1;
+
+    margin: @1 auto;
+
+    color: #808D91;
+  }
+}
+
+.shop-that {
+  margin-bottom: @1*1.5;
+}
+
+// Pricing - Price displayed above the buttons
+.pricing {
+  font-size: 1.75em;
+
+  margin: @1/4 0 0;
+  padding: 0 0 @1/4;
+
+  color: @smashing-red-2;
+
+  // In order to create a line-through we position the parent relatively
+  span {
+    font-size: .66667em;
+    color: @middle-gray + #222;
+
+    // and the before pseudo-element is a dash, slightly rotated and absolutely positioned
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 50%;
+      border-bottom: @1/10 solid #E25A34;
+
+      transform: rotate(-30deg);
+    }
+  }
+
+  strong {
+    color: @middle-gray + #222;
+  }
+}
+
+// Buy Button
+.pre-order-now {
+  font-size: 1.95em;
+  line-height: 1.25;
+  vertical-align: middle;
+
+  color: @white;
+
+  width: 45%;
+  max-width: 100%;
+  padding: .45em;
+  margin: 0 auto .08em;
+  border: .05em solid rgba(0,0,0,0.15);
+
+  background: #F68131;
+  background: linear-gradient(to bottom, #FA9334, #F4712B);
+  opacity: 1;
+
+  border-radius: @1/2;
+  text-shadow: 0 .08em .08em rgba(0,0,0,0.1);
+  box-shadow: 0 .08em .1em rgba(0,0,0,0.1);
+
+  transition: all ease .3s;
+
+  &:hover,
+  &:focus {
+    border: .04em solid rgba(0,0,0,0.25);
+
+    opacity: .95;
+  }
+
+  &:active {
+    color: @white;
+    top: .0641em;
+
+    opacity: 1;
+
+    box-shadow:
+      inset 0 .13em .13em rgba(0,0,0,.4),
+      inset 0 -.13em .13em rgba(255,255,255,.1);
+  }
+}
+
+// Workshop Announcements
+.announcement {
+  list-style: none;
+
+  margin: @1*1.5 0 0;
+
+  li {
+    margin-bottom: @1*3;
+  }
+
+  .grv {
+    width: auto;
+    margin: 0 @1 0 0;
+
+    img {
+      padding: 0;
+      border-radius: @1/2;
+    }
+  }
+}
+
+// Workshpo Description
+.ws-desc {
+  overflow: hidden;
+}
+
+// Workshop Link Element
+.ws-link {
+  .font-proxima-nova-italic;
+
+  display: block;
+
+  margin-bottom: @1/4;
+  padding-bottom: 0;
+  border: 0;
+
+  color: #ADAD0A;
+
+  &:hover,
+  &:focus {
+    border: 0;
+  }
+
+  &:active {
+    color: #adad40;
+    background: transparent;
+    opacity: .6;
+    border: 0;
+  }
+}
+
+.pricing, // price with buy buttons
+.pre-order-now, // buy button
+.lead, // inside tables of contents bullet
+.ws-more, // workshop detailed information
+// Sold out sign on tickets page
+.soo {
+  .font-proxima-nova-bold;
+}
+
+// Workshop Title and Tutor
+.ws-title,
+.ws-coach {
+  padding: @1/4 @1/2;
+  margin: 0 @1/4;
+
+  background: #FFF2CC;
+}
+.ws-title {
+  margin-left: 0;
+}
+.ws-coach {
+  background: rgba(0,119,255,.09);
+}
+
+// Workshop Date, title and tutor
+.ws-date,
+.ws-title,
+.ws-coach {
+  font-size: .9em;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+// Workshop Detailed Information
+.ws-more {
+  font-size: 1.75em;
+  line-height: 1.45;
+
+  float: right;
+  padding: 0 .46429em;
+  margin: 0 0 @1*1.5;
+
+  color: #07C;
+
+  .bobo08;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom-color: #07c;
+  }
+}
+
+// Give images a border-radius of 8 Pixels
+.radius {
+  padding: 0;
+  margin: @1/2 0;
+  border-radius: @1/2;
+}
+
+// Sold Out sign for Tickets page
+.soo {
+  color: @white;
+  background-color: #DA5132;
+
+  padding: .08em .625em;
+}
+
+.keywords span,
+.desc em,
+.keywords em,
+.ws-date,
+.ws-title,
+.ws-coach {
+  color: @middle-gray;
+}
+
+// Red colored headings
+.rh,
+.error {
+  color: @smashing-red;
+}

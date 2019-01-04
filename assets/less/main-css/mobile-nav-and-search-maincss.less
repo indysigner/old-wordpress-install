@@ -1,0 +1,136 @@
+/**
+ * Mobile Navigation Styles
+ *
+ */
+
+// Mobile Nav and Search Closing Button
+.mnc,
+.msc,
+// All elements inside the searchform of the mobile search
+.ms:target .sfm * {
+  box-sizing: border-box;
+}
+
+.mnc,
+.msc {
+  text-align: center;
+
+  top: @1*1.5;
+  right: @1*1.5;
+
+  padding: .4em;
+  width: 2.9375em;
+
+  background: @smashing-red-2;
+
+  border: @08 solid @border-red;
+
+  border-radius: @1/4;
+  box-shadow: 0 @08 @08 rgba(0,0,0,0.25);
+}
+
+.mnc {
+  width: 3.8em;
+}
+
+.msc {
+  right: 6.3em;
+}
+
+// Targeted mobile nav & search
+.mn:target,
+.ms:target {
+  top: -@1*10;
+  z-index: 40;
+
+  padding-top: @1*10;
+  margin-bottom: -@1*8;
+  height: @100;
+  max-height: 62.5em;
+
+  opacity: 1;
+
+  transition:
+    opacity .4s ease-out,
+    max-height .4s ease-out;
+
+  a {
+    width: auto;
+    height: @100;
+  }
+}
+
+// Mobile Nav when targeted -> Mobile Nav Closing
+.mn:target + .mnc,
+.ms:target + .msc {
+  z-index: 99;
+}
+
+// Mobile Nav ul
+.mnu li {
+  line-height: 1.65;
+  padding: 0 .3275em;
+
+  a {
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+// Mobile Navigation Headlines
+.mn h2 {
+  .font-proxima-nova-bold;
+  font-size: 1.25em;
+
+  margin-left: 8.55%;
+  padding: @1 0 0;
+}
+
+// Mobile Nav when targeted -> Mobile Nav ul
+.mn:target .mnu {
+  margin: @1 @space;
+
+  li a {
+    width: auto;
+    height: @100;
+    padding: .3875em 0 .3875em .5475em;
+
+    .bobo08; // see variables-maincss.less
+
+    &:hover,
+    &:focus {
+      background: @yellow;
+      color: @dark-gray;
+      border-color: @cyan;
+    }
+
+    &:active {
+      background: @smashing-red;
+      color: @white;
+    }
+  }
+}
+
+// Mobile Search when targeted -> Search Form Mobile
+.ms:target .sfm {
+  margin: @1 @space;
+
+  [type="text"] {
+    width: 61.8%;
+    height: 2.4em;
+    padding-left: 1.8%;
+    margin: 0 -.75em 0 0;
+    border-right: 0;
+  }
+
+  .submit {
+    line-height: 1.5;
+
+    width: 38.2%;
+    height: 2.4em;
+    padding: 0;
+
+    border-radius: 0 @1/2 @1/2 0;
+  }
+}

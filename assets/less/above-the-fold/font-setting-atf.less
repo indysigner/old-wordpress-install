@@ -1,0 +1,51 @@
+/*
+ * Fontsetting above the fold
+ */
+
+// Elements in Proxima Nova
+body,
+input,
+button,
+label {
+  .font-proxima-nova;
+}
+
+// Elements in Proxima Nova Bold
+.cahe, // catch headline
+.category .cat h2, // category intro container headlines
+strong,
+b,
+.cat h3, // category intro container headlines
+h4,
+.ntb // mobile navigation toggle button (text: Menu)
+{
+  .font-proxima-nova-bold;
+}
+
+// Elements in Skolar
+.pmd .a, // post meta data author list-item
+.pmd + p, // first paragraph of articles
+.ed + p // first paragraph of articles when ads are displayed
+{
+  .font-skolar;
+}
+
+// Elements in Skolar Italic
+.pmd + p em, // emphasized text in the first paragraph of articles
+.ed + p em {
+  .font-skolar-italic;
+}
+
+// Elements in Skolar Bold
+.pmd + p strong, // bold text in the first paragraph of articles
+.ed + p strong,
+.pmd + p b, // bold text in the first paragraph of articles
+.ed + p b {
+  .font-skolar-bold;
+}
+
+// h2 & h3 have different fallback fonts
+h2,
+h3 {
+  .special;
+}

@@ -1,0 +1,55 @@
+/**
+ * 31.25em wide displays
+ * 500px
+ */
+
+@media screen and (min-width:31.25em) {
+
+  // headlines inside the mobile navigation
+  .mn h2 {
+    margin-left: 6.5%;
+
+    &:nth-of-type(2n) {
+      float: left;
+      margin-top: -@1*2;
+    }
+  }
+
+  // mobile nav ul
+  .mnu,
+  // footer product
+  .fp {
+    float: left;
+  }
+
+  .mnu {
+    width: 39%;
+  }
+
+  // footer product description
+  .pd {
+    clear: left;
+  }
+
+  // footer product
+  .fp,
+  // footer product image
+  .pi {
+    width: 33%;
+  }
+
+  .fp {
+    clear: none;
+
+    padding: 0;
+  }
+
+  // footer product description
+  .pd {
+    width: 90%;
+  }
+
+  .pi {
+    padding: @1/4 @1 @1/8 0;
+  }
+}

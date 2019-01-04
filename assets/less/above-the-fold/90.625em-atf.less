@@ -1,0 +1,104 @@
+/**
+ * 90.625em - Above the fold
+ * 1450px viewport width
+ *
+ */
+@media screen and (min-width: 90.625em) {
+
+  // float none
+  .nw,
+  .nw li,
+  .ch {
+    float: none;
+  }
+
+  // removing 10px gap between chrome and body
+  body {
+    border: 0;
+  }
+
+  // Network Navigation now stuck to the left
+  .tn {
+    float: left;
+
+    width: 10%;
+  }
+
+  .nw {
+    width: auto;
+
+    li {
+      border: 0;
+      .bobo08;
+    }
+
+    li a {
+      padding: @1 0 @1 1.375em;
+    }
+
+    // Logo Container in Navigation
+    .current {
+      margin: .6em 0 0;
+      width: auto;
+
+      box-shadow: none;
+
+      // Link inside Logo Container list-item
+      a {
+        padding: @1*1.5 0 @1 @1*1.5;
+        height: auto;
+      }
+
+      // Logo Image Container
+      img {
+        top: 0;
+        left: -@1/2;
+      }
+    }
+  }
+
+  // Social Media Icons alignment and spacing
+  .ch {
+    margin: @1*1.25 0 0 .875em;
+
+    // Switching the way we create spacing between the icons
+    li {
+      margin-left: 0;
+      margin-right: @1/2;
+    }
+  }
+
+  // Content Container takes remaining 90% of the screen minus sidebar and network nav
+  .cc {
+    width: 90%;
+
+    border-top: .625em solid rgba(0,0,0,0);
+  }
+
+  // adding some radius to the content area
+  .fluid {
+    border-radius: 0 .625em .625em .625em;
+  }
+
+  // Spacing on top of the content to align it beneath the logo
+  .grid {
+    margin-top: @1*2.3;
+  }
+
+  // Position Sidebar container on the top
+  .side {
+    top: 0;
+  }
+
+  // Sidebar Searchform Set to align with the logo
+  .mise {
+    top: 1.65em;
+    padding-bottom: @1;
+  }
+
+  // Sidebar Searchform Label positioning
+  .sb .sf .sl {
+    margin: @1*1.5 0 0;
+    padding-top: 0;
+  }
+}

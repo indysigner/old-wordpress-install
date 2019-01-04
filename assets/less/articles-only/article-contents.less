@@ -1,0 +1,112 @@
+// article-contents.less
+
+/**
+ * CSS only used in combination with is_single()
+ **/
+
+// 404 page does not need blue borders at the bottom
+.error404 .post {
+  border-bottom: 0;
+}
+
+// Deeplinked Headlines
+h3:target,
+h4:target {
+  color: @smashing-red-2;
+  border-bottom: @1/4 solid @smashing-red-2;
+  margin-bottom: @1/2;
+}
+
+// Setting the icon for deeplinked headlines
+h3 .hsl,
+h4 .hsl {
+  margin-left: @1/8;
+
+  width: .6em;
+  height: .6em;
+
+  background: url(../images/icon-link.png) no-repeat;
+  background-size: contain;
+  opacity: .25;
+
+  transition: opacity .3s;
+
+  &:hover,
+  &:focus {
+    opacity: .85;
+  }
+
+  &:active {
+    background-color: @smashing-red-2;
+  }
+}
+
+// as the h4 has a lower font-size we need to adjust the icon-size
+h4 .hsl {
+  width: .75em;
+  height: .75em;
+}
+
+// Fifth level headings inside the articles
+h5 {
+  font-size: 1em;
+  text-transform: uppercase;
+
+  padding: @1*1.5 0 @1/2;
+}
+
+// Sixth level headings inside the articles
+h6 {
+  font-size: 1.125em;
+
+  margin: @1*1.5 0 @1/2;
+}
+
+h6,
+th {
+  .font-proxima-nova-bold;
+}
+
+// If you happen to jump to that sentence on the newsletter-page it will be highlighted
+.reason:target {
+  background-color: @yellow;
+}
+
+// sold out sign on tickets page
+.soo {
+  border-radius: @1/4;
+}
+
+// Table head on table of contents
+.details {
+  display: none;
+}
+
+// Bullet Points on Imprint Page
+.bull,
+// sold out sign on tickets page
+.soo {
+  display: inline-block;
+}
+
+// ad above the third h3 of articles older than 20days
+.icad img,
+// Ad placed after the third <h3> in articles older than 20 days
+.icad iframe,
+// button for buying books and such
+.pre-order-now,
+// small print beneath the buttons for buying books
+.options small {
+  display: block;
+}
+
+// ad above the third h3 of articles older than 20days
+.icad {
+  clear: both;
+}
+
+.pre-order-now:active,
+.pricing span,
+.aspect-ratio {
+  position: relative;
+}
